@@ -23,7 +23,6 @@ namespace MinorsApplication.ViewModels
         [RelayCommand]
         async Task GoBack()
         {
-            // Исправить для выхода после регистрации!!
             await Shell.Current.GoToAsync($"{nameof(MainPage)}");
         }
 
