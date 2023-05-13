@@ -26,11 +26,5 @@ namespace MinorsApplication.Models
         public string Minor { get; set; }
         public int NumberOfSeats { get; set; }
         public int NumberOfVacantSeats { get; set; }
-/*        [TextBlob("allApplications")]
-        public List<StudentInfo> allApplications { get; set; }*/
-        /*        public override string ToString()
-                {
-                    return $"{Minor}";
-                }*/
     }
 }
