@@ -42,6 +42,14 @@ namespace MinorsApplication.ViewModels
                 });
                 return;
             }
+            if (password.Length < 8 || password.Length > 20)
+            {
+                await MainThread.InvokeOnMainThreadAsync(() =>
+                {
+                    App.Current.MainPage.DisplayAlert("Ошибка", "Пароль должен иметь от 8 до 20 символов", "OK");
+                });
+                return;
+            }
             status = Functions.Functions.CheckStatus(name);
             if (status == string.Empty)
             {
