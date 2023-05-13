@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.ViewApplications"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             x:DataType="viewmodel:ViewApplicationsViewModel"
+             xmlns:local ="clr-namespace:MinorsApplication.Functions"
+             xmlns:models="clr-namespace:MinorsApplication.Models"
+             Title="HSE Minors">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:EmptyCollectionToTextConverter x:Key="EmptyCollectionToTextConverter"/>
+            <local:ListNullOrEmptyToBoolConverter x:Key="ListNullOrEmptyToBoolConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid Padding="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="330"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="AUTO"/>
+        </Grid.RowDefinitions>
+        <!--Майноры для перевода-->
+        <HorizontalStackLayout>
+            <Label FontSize ="24" Text="Заявки студентов" FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+        <!--Доступные майноры-->
+        <Label Text="{Binding StudentsByTeacherId, Converter={StaticResource EmptyCollectionToTextConverter}}"
+               Grid.Row="1"/>
+        <!--Прокручиваемый список студентов-->
+        <CollectionView ItemsSource="{Binding StudentsByTeacherId}"
+                        SelectionMode="Multiple"
+                        SelectionChanged ="OnCollectionViewSelectionChanged"
+                        Grid.Row="2"
+                        Margin="0,8">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:StudentInfo">
+                    <Border MinimumHeightRequest="150"
+                            Stroke="LightGray">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                </Grid.RowDefinitions>
+                                <!--Имя студента-->
+                                <Label Text="{Binding FullName}"
+                                       FontSize="20" Grid.Row="1" FontAttributes="Bold"/>
+                                <Label Grid.Row="2" FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Почта: " FontAttributes="Bold"/>
+                                            <Span Text="{Binding Email}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <!--Faculty-->
+                                <Label Grid.Row="3" FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Факультет: " FontAttributes="Bold"/>
+                                            <Span Text="{Binding Faculty}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <!--ОП-->
+                                <Label Grid.Row="4" FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="ОП: " FontAttributes="Bold"/>
+                                            <Span Text="{Binding EducationalProgram}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <!--Курс-->
+                                <Label Grid.Row="5" FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Номер курса: " FontAttributes="Bold"/>
+                                            <Span Text="{Binding CourseNumber}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <!--Перцентиль-->
+                                <Label Grid.Row="6" FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Перцентиль: " FontAttributes="Bold"/>
+                                            <Span Text="{Binding Percentile}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <!--Мотивационное письмо-->
+                                <Label Grid.Row="7" FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Мотивационное письмо: "
+                                                  FontAttributes="Bold"/>
+                                            <Span Text="{Binding MotivationLetter}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <VerticalStackLayout Grid.Row ="5" Margin="40" Spacing="20"
+                             IsVisible="{Binding StudentsByTeacherId, Converter = {StaticResource ListNullOrEmptyToBoolConverter}}">
+            <!--Отправить ответ-->
+            <Button Text="Одобрить выбранные"
+                FontSize="20"
+                BackgroundColor="#82bb44"
+                Padding="14"
+                CornerRadius="30"
+                Command="{Binding SendApprovalToStudentsCommand}"/>
+            <!--Отправить ответ-->
+            <Button Text="Отклонить выбранные"
+                BackgroundColor="#7d44bb"
+                Padding="14"
+                FontSize="20"
+                CornerRadius="30"
+                Command="{Binding SendRejectionToStudentsCommand}"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

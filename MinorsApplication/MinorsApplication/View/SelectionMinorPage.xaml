@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.SelectionMinorPage"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             xmlns:models="clr-namespace:MinorsApplication.Models"
+             x:DataType="viewmodel:SelectionMinorViewModel"
+             Title="HSE Minors">
+
+    <Grid Padding="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="330"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="AUTO"/>
+        </Grid.RowDefinitions>
+
+        <!--Майноры для перевода-->
+        <HorizontalStackLayout>
+            <Label FontSize ="24" Text="Заявка на перевод" FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+        <!--Доступные майноры-->
+        <Label Text="Доступные майноры"
+               Grid.Row="1"/>
+        <!--Прокручиваемый список майноров-->
+        <CollectionView ItemsSource="{Binding AvailableTeachers}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedTeacher}"
+                        Grid.Row="2"
+                        Margin="0,8">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:TeacherInfo">
+                    <Border MinimumHeightRequest="110"
+                            Stroke="LightGray">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                </Grid.RowDefinitions>
+                                <!--Название майнора-->
+                                <Label Text="{Binding Minor}"
+                                       FontSize="20" FontAttributes="Bold"/>
+                                <!--Имя преподавателя-->
+                                <Label Text="{Binding FullName}"
+                                       FontSize="16" Grid.Row="1"/>
+                                <!--Количество вакантых мест/всего мест-->
+                                <Label Grid.Row="2">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Количество мест: " FontAttributes="Bold"/>
+                                            <Span Text="{Binding NumberOfVacantSeats}"/>
+                                            <Span Text="/"/>
+                                            <Span Text="{Binding NumberOfSeats}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <!--Почта преподавателя-->
+                                <Label Text="{Binding Email}" Grid.Row="3"/>
+
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <!--Отправить заявку-->
+        <Button Text="Отправить заявку"
+                BackgroundColor="#BAB4F5"
+                Grid.Row="5"
+                Padding="16"
+                CornerRadius="30"
+                Command="{Binding SendApplicationCommand}"/>
+        <Label Text="Расскажите о своей мотивации"
+               Grid.Row="3"
+               FontSize="20"
+               FontAttributes="Bold"
+               Padding="1"/>
+        <Editor 
+            Placeholder="Напишите мотивационное письмо" 
+            BackgroundColor="AliceBlue"
+                FontSize="16"
+                Text="{Binding MotivationLetter}"
+                Grid.Row="4"
+                MaxLength="2000"
+                HorizontalTextAlignment="Start"/>
+    </Grid>
+</ContentPage>

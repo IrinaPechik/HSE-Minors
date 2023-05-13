@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MinorsApplication</name>
+    </assembly>
+    <members>
+        <member name="P:MinorsApplication.ViewModels.AccountCreationViewModel.UserName">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.AccountCreationViewModel.userName"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.AccountCreationViewModel.Password">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.AccountCreationViewModel.password"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.AccountCreationViewModel.RepeatedPassword">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.AccountCreationViewModel.repeatedPassword"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.AccountCreationViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.AccountCreationViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.AccountCreationViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.AccountCreationViewModel.Register(System.String)"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.LoginViewModel.UserName">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.LoginViewModel.userName"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.LoginViewModel.signInCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.LoginViewModel.SignInCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.LoginViewModel.SignInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.LoginViewModel.SignIn(System.String)"/>.</summary>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.LoginViewModel.createAccountCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.LoginViewModel.CreateAccountCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.LoginViewModel.CreateAccountCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.LoginViewModel.CreateAccount"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.SelectionMinorViewModel.AvailableTeachers">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.SelectionMinorViewModel.availableTeachers"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.SelectionMinorViewModel.CurrentStudent">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.SelectionMinorViewModel.currentStudent"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.SelectionMinorViewModel.SelectedTeacher">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.SelectionMinorViewModel.selectedTeacher"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.SelectionMinorViewModel.MotivationLetter">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.SelectionMinorViewModel.motivationLetter"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.SelectionMinorViewModel.sendApplicationCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.SelectionMinorViewModel.SendApplicationCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.SelectionMinorViewModel.SendApplicationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.SelectionMinorViewModel.SendApplication"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.Email">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.email"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.Password">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.password"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.FullName">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.fullName"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.EducationalProgram">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.educationalProgram"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.Faculty">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.faculty"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.CourseNumber">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.courseNumber"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.Percentile">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.percentile"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.StudentInfoPageViewModel.saveDataCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.SaveDataCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentInfoPageViewModel.SaveDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.StudentInfoPageViewModel.SaveData"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.Student">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.student"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.SelectedTeacher">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.selectedTeacher"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.selectMinorCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.SelectMinorCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.SelectMinorCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.SelectMinor"/>.</summary>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.deleteApplicationCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.DeleteApplicationCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.DeleteApplicationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.StudentPersonalAccountViewModel.DeleteApplication"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.Email">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.email"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.Password">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.password"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.FullName">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.fullName"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.Minor">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.minor"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.NumberOfSeats">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.numberOfSeats"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.NumberOfVacantSeats">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.numberOfVacantSeats"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.TeacherInfoPageViewModel.saveDataCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.SaveDataCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherInfoPageViewModel.SaveDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.TeacherInfoPageViewModel.SaveData"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.Teacher">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.teacher"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.viewStudentsApplicationsCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.ViewStudentsApplicationsCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.ViewStudentsApplicationsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.TeacherPersonalAccountViewModel.ViewStudentsApplications"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.ViewApplicationsViewModel.StudentsByTeacherId">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.ViewApplicationsViewModel.studentsByTeacherId"/>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.ViewApplicationsViewModel.CurrentTeacher">
+            <inheritdoc cref="F:MinorsApplication.ViewModels.ViewApplicationsViewModel.currentTeacher"/>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.ViewApplicationsViewModel.sendApprovalToStudentsCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.ViewApplicationsViewModel.SendApprovalToStudentsCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.ViewApplicationsViewModel.SendApprovalToStudentsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.ViewApplicationsViewModel.SendApprovalToStudents"/>.</summary>
+        </member>
+        <member name="F:MinorsApplication.ViewModels.ViewApplicationsViewModel.sendRejectionToStudentsCommand">
+            <summary>The backing field for <see cref="P:MinorsApplication.ViewModels.ViewApplicationsViewModel.SendRejectionToStudentsCommand"/>.</summary>
+        </member>
+        <member name="P:MinorsApplication.ViewModels.ViewApplicationsViewModel.SendRejectionToStudentsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MinorsApplication.ViewModels.ViewApplicationsViewModel.SendRejectionToStudents"/>.</summary>
+        </member>
+    </members>
+</doc>

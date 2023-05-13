@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.StudentPersonalAccount"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             xmlns:local ="clr-namespace:MinorsApplication.Functions"
+             x:DataType="viewmodel:StudentPersonalAccountViewModel"
+             Title="HSE Minors">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StringNullOrEmptyToBoolConverter x:Key="StringNullOrEmptyToBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid BackgroundColor="White" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Row="1" Grid.Column="1">
+            <Label Text="{Binding Student.FullName}" HorizontalOptions="Start" FontSize="27"
+               FontAttributes="Bold"/>
+            <Label Text="Студент" HorizontalOptions="Start" FontSize="20" TextColor="#2A2194" FontAttributes="Bold"/>
+            <Label Text="{Binding Student.Faculty}" HorizontalOptions="Fill"  FontAttributes="Bold" FontSize="18"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding Student.CourseNumber}" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text=" курс" FontSize="18" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="1">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Почта:    " TextColor="#2A2194" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="{Binding Student.Email}" FontSize="20" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Перцентиль: " TextColor="#2A2194" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="{Binding Student.Percentile}" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="%" FontSize="18" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <VerticalStackLayout IsVisible="{Binding Student.MinorName, Converter={StaticResource StringNullOrEmptyToBoolConverter}}">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Майнор: " TextColor="#2A2194" FontSize="18" FontAttributes="Bold"/>
+                            <Span Text="{Binding Student.MinorName}"  FontSize="18" FontAttributes="Bold"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Статус заявки: " TextColor="#2A2194" FontSize="18" FontAttributes="Bold"/>
+                            <Span Text="{Binding Student.StatusOfApplication}" FontSize="18" FontAttributes="Bold"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer 
+                                    Command="{Binding DeleteApplicationCommand}"/>
+                    </Grid.GestureRecognizers>
+                    <Label Text="Отозвать заявку"
+                               TextColor="Black"
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                </Grid>
+            </VerticalStackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button
+                    x:Name="SaveData"
+                    Text="Выбрать майнор"
+                    Command="{Binding SelectMinorCommand}"  
+                    BackgroundColor="#BAB4F5"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    Padding="18"
+                    WidthRequest="330"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.StudentInfoPage"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             x:DataType="viewmodel:StudentInfoPageViewModel"
+             Title="HSE Minors">
+    <Grid BackgroundColor="White" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="160"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="1"
+               Text="Уважаемый студент, заполните свои данные:"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="End"
+               FontSize="Title"
+               FontAttributes="Bold"/>
+        <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Keyboard= "Text"
+                               Placeholder="ФИО"
+                               Text ="{Binding FullName}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Placeholder="Название факультета"
+                               Text ="{Binding Faculty}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Placeholder="Название образовательной программы"
+                               Text ="{Binding EducationalProgram}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Keyboard="Numeric"
+                               Placeholder="Номер курса"
+                               Text ="{Binding CourseNumber}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Keyboard="Numeric"
+                               Placeholder="Перцентиль"
+                               Text ="{Binding Percentile}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand">
+            <Button
+                    x:Name="SaveData"
+                    Text="Сохранить данные"
+                    Command="{Binding SaveDataCommand}"     
+                    BackgroundColor="#BAB4F5"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    Padding="18"
+                    WidthRequest="330"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

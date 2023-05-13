@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = MinorsApplication
+build_property.ProjectDir = C:\Users\lisen\source\repos\MinorsApplication\MinorsApplication\
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/AccountCreation.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.AccountCreation.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AccountCreation.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AccountCreation.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/SelectionMinorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.SelectionMinorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SelectionMinorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SelectionMinorPage.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/StudentInfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.StudentInfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\StudentInfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\StudentInfoPage.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/StudentPersonalAccount.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.StudentPersonalAccount.xaml
+build_metadata.AdditionalFiles.TargetPath = View\StudentPersonalAccount.xaml
+build_metadata.AdditionalFiles.RelativePath = View\StudentPersonalAccount.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/TeacherInfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.TeacherInfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TeacherInfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TeacherInfoPage.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/TeacherPersonalAccount.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.TeacherPersonalAccount.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TeacherPersonalAccount.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TeacherPersonalAccount.xaml
+
+[C:/Users/lisen/source/repos/MinorsApplication/MinorsApplication/View/ViewApplications.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MinorsApplication.View.ViewApplications.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewApplications.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewApplications.xaml

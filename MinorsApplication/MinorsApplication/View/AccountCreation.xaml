@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.AccountCreation"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             x:DataType="viewmodel:AccountCreationViewModel"
+             Title="HSE Minors">
+
+    <Grid BackgroundColor="White" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="210"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="1"
+               Text="Регистрация"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="End"
+               FontSize="Title"
+               FontAttributes="Bold"/>
+
+        <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Keyboard= "Email"
+                               Placeholder="Адрес корпоративной эл.почты"
+                               Text ="{Binding UserName}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Placeholder="Пароль"
+                               Text ="{Binding Password}"
+                               IsPassword="True"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                    <Entry     Placeholder="Подтверждение пароля"
+                               Text ="{Binding RepeatedPassword}"
+                               IsPassword="True"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Start"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand">
+            <Button
+                    x:Name="Register"
+                    Text="Зарегистрироваться"
+                    Command="{Binding RegisterCommand}"     
+                    CommandParameter="{Binding UserName}"
+                    BackgroundColor="#BAB4F5"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    Padding="15"
+                    WidthRequest="330"
+                    />
+        </StackLayout>
+    </Grid>
+</ContentPage>

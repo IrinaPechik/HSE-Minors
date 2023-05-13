@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.TeacherPersonalAccount"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             x:DataType="viewmodel:TeacherPersonalAccountViewModel"
+             Title="HSE Minors">
+    <Grid BackgroundColor="White" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="210"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Row="1" Grid.Column="1">
+            <Label Text="{Binding Teacher.FullName}" HorizontalOptions="Start" FontSize="27"
+               FontAttributes="Bold"/>
+            <Label Text="Преподаватель" HorizontalOptions="Start" FontSize="20" TextColor="#2A2194" FontAttributes="Bold"/>
+            <Label Text="{Binding Teacher.Minor}" HorizontalOptions="Fill"  FontAttributes="Bold" FontSize="18"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="1">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Почта:    " TextColor="#2A2194" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="{Binding Teacher.Email}" FontSize="20" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Количество свободных мест: " TextColor="#2A2194" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="{Binding Teacher.NumberOfVacantSeats}" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="/" FontSize="18" FontAttributes="Bold"/>
+                        <Span Text="{Binding Teacher.NumberOfSeats}" FontSize="18" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button
+                    x:Name="SaveData"
+                    Text="Посмотреть заявки"
+                    Command="{Binding ViewStudentsApplicationsCommand}"  
+                    BackgroundColor="#BAB4F5"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    Padding="18"
+                    WidthRequest="330"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

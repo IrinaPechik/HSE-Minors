@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinorsApplication.MainPage"
+             xmlns:viewmodel="clr-namespace:MinorsApplication.ViewModels"
+             x:DataType="viewmodel:LoginViewModel"
+             Title="HSE Minors">
+
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid RowSpacing="5" Grid.Row="1" Margin="15,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="1"
+                Text ="Вход"
+                HorizontalOptions="Center"
+                FontSize="Title"
+                FontAttributes="Bold"
+                Padding="0"
+                Margin="0"/>
+
+            <StackLayout Grid.Row="3" Orientation="Vertical"
+                         HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="#EAEAEA" Padding="6" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                        <Entry Keyboard= "Email"
+                               Text ="{Binding UserName}"
+                               Placeholder="Адрес корпоративной эл.почты"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="#EAEAEA" Padding="6" Margin ="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+
+                        <Entry Text ="{Binding Password}"
+                               IsPassword="True"
+                               Placeholder="Пароль"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="10,0,20,0"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             Margin="0,10,0,0" Padding="0">
+                </StackLayout>
+
+                <Button
+                    x:Name="SignIn"
+                    Text="Войти"
+                    Command="{Binding SignInCommand}"
+                    CommandParameter="{Binding UserName}"
+                    BackgroundColor="#BAB4F5"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="30"
+                    WidthRequest="200"
+                    Margin="0,15,0,0"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0">
+                    <Label Text="Новый пользователь?"
+                           TextColor="DarkGray"
+                           FontSize="Small"/>
+                    <Grid>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding CreateAccountCommand}"/>
+                        </Grid.GestureRecognizers>
+                        <Label Text=" Создать аккаунт"
+                           TextColor="#2A2194"
+                           FontAttributes="Bold"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
